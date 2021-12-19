@@ -61,7 +61,7 @@ class ROSduct(object):
             rospy.logerr('No rosbridge_ip given.')
             raise Exception('No rosbridge_ip given.')
         self.rosbridge_port = rospy.get_param('~rosbridge_port', 9090)
-        rospy.loginfo("Will connect to ROSBridge websocket: wss://{}:{}".format(
+        rospy.loginfo("Will connect to ROSBridge websocket: ws://{}:{}".format(
             self.rosbridge_ip, self.rosbridge_port))
 
         # Topics
